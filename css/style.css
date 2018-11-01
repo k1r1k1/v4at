@@ -1,0 +1,174 @@
+#clientMsg {
+	width: 70%;
+}
+
+.message .image {
+	width: 50px;
+	max-height: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+.message {
+	clear: both;
+	padding: 4px 10px;
+	width: 90%;
+}
+
+.name {
+	font-weight: 500;
+	margin-top: -5px;
+	color: #bababa;
+}
+
+.card-body {
+	padding: 5px 10px;
+}
+
+.time {
+	color: #999;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.text {
+	font-size: 14px;
+	color: #fff;
+}
+
+.col-md-1 {
+	padding: 0;
+	max-width: 50px;
+}
+
+.bg-light {
+	background-color: #000000eb !important;
+}
+
+.navbar-light .navbar-brand {
+	color: #00FB00 !important;
+}
+
+#wrapper {
+	margin: 60px 0;
+	display: flow-root;
+}
+
+#container {
+	filter: blur(5px);
+	overflow: hidden;
+    margin: -10px;
+    width: calc(100vw + 20px);
+    height: calc(100vh + 20px);
+}
+
+.navbar {
+	display: none;
+	padding: .5rem;
+}
+
+.background {
+	position: fixed;
+	width: 100%;
+    height: 100vh;
+	top: 0;
+	background: #000;
+}
+
+.message .card {
+    background-color: #ffffff1c;
+    border: none;
+}
+
+.form-control, .card, .btn, .modal-content, .badge {
+	border-radius: 0;
+}
+
+.modal-content {
+    background: #131313;
+    color: #00fb00;
+}
+
+.modal-header {
+	border-bottom: 1px solid #00fb00;
+}
+
+.modal-footer {
+	border-top: 1px solid #00fb00;
+}
+
+.form-control {
+    background-color: #00000000 !important;
+	color: #999;
+}
+
+.logo {
+	width: 20px;
+	margin-right: 5px;
+}
+
+.badge-info {
+    background-color: #005b00;
+}
+
+.btn-outline-success {
+    color: #00fb00;
+    border-color: #00fb00;
+}
+
+.btn-outline-success {
+	
+}
+
+.user-message {
+    float: right;
+}
+.user-message .card {
+    background-color: #ffffff36;
+}
+
+.row {
+    text-align: center;
+	margin-bottom: 2rem;
+}
+
+.modal-content img:hover {
+	transition: .3s;
+	cursor: pointer;
+	box-shadow: 0 0 0 .45rem rgba(0, 251, 0, .2)
+}
+
+.modal-content img:active {
+	box-shadow: 0 0 0 .15rem rgba(0, 251, 0, .5)
+}
+
+.intro img {
+	cursor: pointer;
+}
+
+.card-start {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 30%;
+    background: #ffffff61;
+    color: #fff;
+}
+
+.cit {
+    font-style: italic;
+    font-size: 13px;
+	margin: 5px;
+}
+
+.aut {
+    font-size: 12px;
+    margin: 0 0 15px 10px;
+}
+
+.intro img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
