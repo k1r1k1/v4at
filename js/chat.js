@@ -5,7 +5,14 @@
 
 	ws.onopen = function () {
 		console.log('connection established');
-	};
+	}
+
+	/*	on error  */
+
+	ws.onerror = function (event) {
+		console.log(event);
+		alert('Сервер ' + event.target.url + ' не отвечает');
+	}
 
 	/*	on message  */
 
@@ -17,12 +24,11 @@
 			$lastMsg.id = 'last-msg';
 			document.querySelector('#last-msg').remove();
 			if (data.name == document.querySelector('#name').value) {
-				console.log('user message');
 				$div.classList = 'message user-message';
-				} else {
-					console.log('message');
-					$div.className = 'message';
-				}
+			} else {
+				console.log('message');
+				$div.className = 'message';
+			}
 			$div.innerHTML = `<div class="card">
 					<div class="card-body">
 						<div class="user">
@@ -32,9 +38,7 @@
 								<span class="badge badge-info">` + data.time + `</span>
 							</div>
 							</div>
-
 							<div class="text">` + data.message + `</div>
-							
 						</div>
 					</div>
 				</div>`;
@@ -45,7 +49,7 @@
 	};
 
 	/*	on ready  */
-	
+
 	document.onreadystatechange = function () {
 		if (document.readyState === "complete") {
 			console.log('<f> doc ready');
@@ -54,7 +58,7 @@
 			var $img = document.querySelector('#avUrl'),
 				$name = document.querySelector('#name'),
 				$message = document.querySelector('#clientMsg');
-			
+
 			document.querySelector('#logIn').addEventListener('click', function () {
 				if ($name.value !== '') {
 					document.querySelector('.intro').style.display = 'none';
@@ -62,11 +66,11 @@
 					document.querySelector('#container').style.filter = 'none';
 					document.querySelector('.fixed-bottom').style.display = 'flex';
 					document.querySelector('.fixed-top').style.display = 'flex';
-					} else {
-						document.querySelector('#name').classList = 'form-control mr-sm-2 is-invalid';
-					}
+				} else {
+					document.querySelector('#name').classList = 'form-control mr-sm-2 is-invalid';
+				}
 			})
-			
+
 			document.querySelector('#send').addEventListener('click', function () {
 				/*if ($img.value !== '') {
 					img = $img.value
@@ -82,17 +86,32 @@
 					message: message,
 					time: time
 				};
-				ws.send(JSON.stringify(data));
-				console.log(data);
-				document.querySelector('#clientMsg').value = '';
+
+				/*try {
+					ws.send(JSON.stringify(data));
+					throw new Error('Сообщение не отправлено: Сервер не отвечает');
+				} catch (e) {
+					if (e) {
+						console.log(e);
+					} else {
+						console.log(data);
+						document.querySelector('#clientMsg').value = '';
+					}
+				}*/
+
+				ws.send(JSON.stringify(data), function ack(error) {
+					alert(error);
+				});
+				//ws.send(JSON.stringify(data));
+
 			})
-			
+
 			document.querySelector('#clientMsg').addEventListener('keypress', function (event) {
 				if (event.keyCode == 13) {
 					document.querySelector('#send').click();
 				}
 			});
-			
+
 		}
 	}
 
