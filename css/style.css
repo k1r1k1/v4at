@@ -8,11 +8,13 @@ html, body {
 }
 
 #clientMsg {
-	width: 80%;
+	width: 95%;
 }
 
 #send {
-    width: 10%;
+    width: 80px;
+    padding: 0;
+    height: 38px;
 }
 
 .message .image {
@@ -60,6 +62,7 @@ html, body {
 
 .navbar-light .navbar-brand {
 	color: #00FB00 !important;
+	margin-left: 10px;
 }
 
 #wrapper {
@@ -134,7 +137,7 @@ html, body {
     background-color: #ffffff36;
 }
 
-.row {
+.modal-body .row {
     text-align: center;
 	margin-bottom: 2rem;
 }
@@ -155,11 +158,18 @@ html, body {
 
 .card-start {
     top: 0;
-    right: 0;
     position: absolute;
     width: 30%;
-    background: #ffffff61;
+    background: #ffffff21;
     color: #fff;
+}
+
+.card-left {
+	left: 0;
+}
+
+.card-right {
+	right: 0;
 }
 
 .cit {
@@ -173,7 +183,7 @@ html, body {
     margin: 0 0 15px 10px;
 }
 
-.intro img {
+.enter-img {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -184,7 +194,16 @@ html, body {
 	background: #000;
 }
 
-@media (max-width: 768px) {
+.logo-card {
+	color: #fff;
+}
+
+.logo-card:hover {
+	color: #00fb00;
+	text-decoration: none;
+}
+
+@media (max-width: 850px) {
 	.card-start {
 		width: 100%;
 	}
@@ -192,7 +211,32 @@ html, body {
 	.background {
 		width: calc(100% + 20px);
 		height: calc(100% + 20px);
+	}
 
+	.enter-img {
+		transform: translate(-50%, -50%) scale(.7);
+	}
+
+	.col-md-3 {
+		width: 65px;
+	}
+
+	#send {
+    	width: 10%;
+	}
+
+	#clientMsg {
+		width: 88%;
+	}
+
+	nav {
+		padding: 0 4px !important;
+		height: 44px;
+	}
+
+	.card-left {
+		bottom: 0;
+		top: unset;
 	}
 }
 

@@ -61,7 +61,7 @@
 		if (document.readyState === "complete") {
 			console.log('<f> doc ready');
 			let modalInit = new Modal(document.getElementById('modalInit'));
-			document.querySelector('.intro img').addEventListener('click', modalInit.show);
+			document.querySelector('.enter-img').addEventListener('click', modalInit.show);
 			var $img = document.querySelector('#avUrl'),
 				$name = document.querySelector('#name'),
 				$message = document.querySelector('#clientMsg');
@@ -79,9 +79,6 @@
 			})
 
 			document.querySelector('#send').addEventListener('click', function () {
-				/*if ($img.value !== '') {
-					img = $img.value
-				} else img = 'img/3.jpg';*/
 				img = 'img/3.jpg';
 				if ($message.value == '') return;
 				var name = $name.value,
@@ -93,7 +90,7 @@
 					message: message,
 					time: time
 				};
-
+				$message.value = '';
 				/*try {
 					ws.send(JSON.stringify(data));
 					throw new Error('Сообщение не отправлено: Сервер не отвечает');
