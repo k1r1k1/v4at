@@ -1,10 +1,11 @@
-html, body {
-    position: absolute;
-    background: #f2f2f2;
-    overflow-x: hidden;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
+html,
+body {
+	position: absolute;
+	background: #f2f2f2;
+	overflow-x: hidden;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 #clientMsg {
@@ -12,9 +13,9 @@ html, body {
 }
 
 #send {
-    width: 80px;
-    padding: 0;
-    height: 38px;
+	width: 80px;
+	padding: 0;
+	height: 38px;
 }
 
 .message .image {
@@ -73,9 +74,9 @@ html, body {
 .background {
 	filter: blur(5px);
 	overflow: hidden;
-    margin: -10px;
-    width: calc(100vw + 20px);
-    height: calc(100vh + 20px);
+	margin: -10px;
+	width: calc(100vw + 20px);
+	height: calc(100vh + 20px);
 	position: fixed;
 	background: #000;
 }
@@ -86,17 +87,21 @@ html, body {
 }
 
 .message .card {
-    background-color: #ffffff1c;
-    border: none;
+	background-color: #ffffff1c;
+	border: none;
 }
 
-.form-control, .card, .btn, .modal-content, .badge {
+.form-control,
+.card,
+.btn,
+.modal-content,
+.badge {
 	border-radius: 0;
 }
 
 .modal-content {
-    background: #131313;
-    color: #00fb00;
+	background: #131313;
+	color: #00fb00;
 }
 
 .modal-header {
@@ -108,7 +113,7 @@ html, body {
 }
 
 .form-control {
-    background-color: #00000000 !important;
+	background-color: #00000000 !important;
 	color: #999;
 }
 
@@ -118,27 +123,26 @@ html, body {
 }
 
 .badge-info {
-    background-color: #005b00;
+	background-color: #005b00;
 }
 
 .btn-outline-success {
-    color: #00fb00;
-    border-color: #00fb00;
+	color: #00fb00;
+	border-color: #00fb00;
 }
 
-.btn-outline-success {
-	
-}
+.btn-outline-success {}
 
 .user-message {
-    float: right;
+	float: right;
 }
+
 .user-message .card {
-    background-color: #ffffff36;
+	background-color: #ffffff36;
 }
 
 .modal-body .row {
-    text-align: center;
+	text-align: center;
 	margin-bottom: 2rem;
 }
 
@@ -149,7 +153,9 @@ html, body {
 }
 
 .modal-content img:active {
-	box-shadow: 0 0 0 .15rem rgba(0, 251, 0, .5)
+	transition: .3s;
+	cursor: pointer;
+	box-shadow: 0 0 0 .45rem rgba(0, 251, 0, .2)
 }
 
 .intro img {
@@ -157,11 +163,12 @@ html, body {
 }
 
 .card-start {
-    top: 0;
-    position: absolute;
-    width: 30%;
-    background: #ffffff21;
-    color: #fff;
+	margin: 1rem;
+	top: 0;
+	position: absolute;
+	width: 30%;
+	background: #ffffff21;
+	color: #fff;
 }
 
 .card-left {
@@ -173,21 +180,21 @@ html, body {
 }
 
 .cit {
-    font-style: italic;
-    font-size: 13px;
+	font-style: italic;
+	font-size: 13px;
 	margin: 5px;
 }
 
 .aut {
-    font-size: 12px;
-    margin: 0 0 15px 10px;
+	font-size: 12px;
+	margin: 0 0 15px 10px;
 }
 
 .enter-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #container {
@@ -206,6 +213,7 @@ html, body {
 @media (max-width: 850px) {
 	.card-start {
 		width: 100%;
+		margin: 0;
 	}
 
 	.background {
@@ -222,7 +230,7 @@ html, body {
 	}
 
 	#send {
-    	width: 10%;
+		width: 10%;
 	}
 
 	#clientMsg {
@@ -240,6 +248,4 @@ html, body {
 	}
 }
 
-@media (max-height: 450px) {
-
-}
+@media (max-height: 450px) {}

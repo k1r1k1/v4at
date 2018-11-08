@@ -1,3 +1,16 @@
+var chosenImg = '';
+
+function checkImg(tiss) {
+	document.querySelectorAll('.modal-body img').forEach(function (item) {
+		if (tiss == item) {
+			chosenImg = tiss.src;
+			item.style = 'box-shadow: 0 0 0 .15rem rgba(0, 251, 0, .5); transition: .3s;'
+		} else {
+			item.style = 'hover: box-shadow: none;'
+		}
+	})
+}
+
 ! function () {
 	var ws = new WebSocket('ws://localhost:3771');
 
@@ -79,14 +92,14 @@
 			})
 
 			document.querySelector('#send').addEventListener('click', function () {
-				img = 'img/3.jpg';
+				if (chosenImg == '') chosenImg = 'img/0.jpg';
 				if ($message.value == '') return;
 				var name = $name.value,
 					message = $message.value,
 					time = new Date().toLocaleTimeString();
 				data = {
 					name: name,
-					img: img,
+					img: chosenImg,
 					message: message,
 					time: time
 				};
