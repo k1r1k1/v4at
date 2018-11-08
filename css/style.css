@@ -164,7 +164,6 @@ body {
 
 .card-start {
 	margin: 1rem;
-	top: 0;
 	position: absolute;
 	width: 30%;
 	background: #ffffff21;
@@ -172,11 +171,13 @@ body {
 }
 
 .card-left {
+	top: 0;
 	left: 0;
 }
 
 .card-right {
 	right: 0;
+	bottom: 0;
 }
 
 .cit {
@@ -203,11 +204,22 @@ body {
 
 .logo-card {
 	color: #fff;
+	font-size: 17px;
 }
 
 .logo-card:hover {
 	color: #00fb00;
 	text-decoration: none;
+}
+
+.logo-github {
+    height: 20px;
+    margin-right: 5px;
+	vertical-align: sub;
+}
+
+.right {
+    float: right;
 }
 
 @media (max-width: 850px) {
@@ -242,10 +254,6 @@ body {
 		height: 44px;
 	}
 
-	.card-left {
-		bottom: 0;
-		top: unset;
-	}
 }
 
 @media (max-height: 450px) {}
