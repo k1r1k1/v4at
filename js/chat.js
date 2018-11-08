@@ -10,8 +10,15 @@
 	/*	on error  */
 
 	ws.onerror = function (event) {
-		console.log(event);
+		console.log('Ошибка', event);
 		alert('Сервер ' + event.target.url + ' не отвечает');
+	}
+
+	/*	on close  */
+
+	ws.onclose = function (event) {
+		console.log('Соединение прервано', event);
+		alert('Соединение ' + event.target.url + ' прервано');
 	}
 
 	/*	on message  */
