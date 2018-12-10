@@ -256,4 +256,8 @@ body {
 
 }
 
-@media (max-height: 450px) {}
+@media (max-width: 360px) {
+	.card-right {
+		display: none;
+	}
+}
