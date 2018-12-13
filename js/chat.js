@@ -89,7 +89,10 @@ document.onreadystatechange = function () {
 						document.querySelector('#last-msg').scrollIntoView();
 					} else if (JSON.parse(event.data).type == 'auth') {
 						if (JSON.parse(event.data).id == 'error') {
-							console.error('auth fail!');
+							document.getElementById('modalErr').querySelector('.modal-body').innerHTML = '<h4>Ошибка авторизации!</h4><label>Возможно пользователь с таким именем уже существует. Попробуйте войти с другим именем</label>';
+							let modalErr = new Modal(document.getElementById('modalErr'));
+							modalInit.hide();
+							modalErr.show();
 						} else {
 							console.log('success auth!');
 							document.querySelector('.intro').style.display = 'none';
