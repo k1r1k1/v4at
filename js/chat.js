@@ -89,7 +89,7 @@ document.onreadystatechange = function () {
 						document.querySelector('#last-msg').scrollIntoView();
 					} else if (JSON.parse(event.data).type == 'auth') {
 						if (JSON.parse(event.data).id == 'error') {
-							document.getElementById('modalErr').querySelector('.modal-body').innerHTML = '<h4>Ошибка авторизации!</h4><label>Возможно пользователь с таким именем уже существует. Попробуйте войти с другим именем</label>';
+							document.getElementById('modalErr').querySelector('.modal-body').innerHTML = '<h4>Авторизация не выполнена!</h4><label>Возможно пользователь с таким именем уже существует. Попробуйте войти с другим именем</label>';
 							let modalErr = new Modal(document.getElementById('modalErr'));
 							modalInit.hide();
 							modalErr.show();
