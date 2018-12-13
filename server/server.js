@@ -26,7 +26,7 @@ wss.on('connection', function (ws) {
 				img: JSON.parse(message).img,
 				name: toHtml(JSON.parse(message).name.toLowerCase()),
 				id: id,
-				client: usersOfTable1[id],
+				//client: usersOfTable1[id], //user WS.obj
 				time: new Date().toLocaleTimeString()
 			};
 			Object.keys(usersOfTable1).forEach(function (item) {
@@ -37,6 +37,7 @@ wss.on('connection', function (ws) {
 				}
 			})
 			if (!trig) {
+				console.log(authData);
 				usersOfTable1[id].send(JSON.stringify(authData)); // send logIn response to user
 				usersOfTable1[id] = authData; // replace wsObj to responseObj
 				showOnlineUsers() // debug logs start
